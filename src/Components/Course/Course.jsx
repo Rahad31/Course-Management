@@ -51,7 +51,7 @@ const Course = ({ course }) => {
           </svg>
           <p className="text-sm font-normal">Credit : {credit} hr</p>
         </div>
-        <button class="mx-auto my-4 h-[40px] w-[280px] text-center flex justify-center items-center bg-blue-400 rounded-md text-lg font-semibold text-white hover:bg-orange-500 text-blue-300 ">
+        <button class="mx-auto my-4 h-[40px] w-[280px] text-center flex justify-center items-center bg-blue-400 rounded-md text-lg font-semibold text-white hover:bg-orange-500  ">
           Select
         </button>
       </div>
