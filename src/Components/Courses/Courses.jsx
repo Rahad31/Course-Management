@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Course from "../course/course";
-const Courses = () => {
+const Courses = ({ handleAddBookmark }) => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     fetch("course.json")
@@ -8,9 +8,13 @@ const Courses = () => {
       .then((data) => setCourses(data));
   }, []);
   return (
-    <div className="w-2/3 flex flex-row flex-wrap justify-center items-center gap-6">
+    <div className=" mx-auto flex flex-col flex-wrap justify-center items-center gap-6 md:flex-row lg:w-3/4">
       {courses.map((course) => (
-        <Course key={course.id} course={course}></Course>
+        <Course
+          key={course.id}
+          course={course}
+          handleAddBookmark={handleAddBookmark}
+        ></Course>
       ))}
     </div>
   );
